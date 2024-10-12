@@ -66,6 +66,14 @@ export PATH="$PATH:$HOME/tigris/bin"
 $ rm -rf ~/tigris
 ```
 
+# APPLICATION PRIVILEGES
+
+The first several runs of the application may trigger OS permission prompts, for the console emulator and/or tigris.
+
+Grant the permission to the respective application(s). Then relaunch the console emulator and retry.
+
+Recommend prototyping archival scans with a small frame count (e.g. 3) in order to accelerate troubleshooting.
+
 # PREREQUISITES
 
 1. Launch a console emulator, e.g. Terminal.
@@ -75,9 +83,10 @@ $ rm -rf ~/tigris
 
 # TIPS
 
+* To end the script early, foreground the console emulator and press `Control + C`.
 * Queue `tigris` command in console emulator, then adjust the cursor to minimize Kindle HUD artifacts before submitting the command with the Return (Enter) key.
 * Temporarily silence browser and other application notifications during scans.
-* To end the script early, foreground the console emulator and press `Control + C`.
+
 
 # CONTRIBUTING
 
