@@ -1,0 +1,56 @@
+#!/usr/bin/osascript
+
+-- Usage: tigris [<frame count>]
+
+-- Preconditions:
+--
+-- * Kindle app tiled to left half of full screen.
+-- * Desired book open to starting page.
+
+on run argv
+    set n to 1
+
+    try
+        set n to item 1 of argv as number
+    end try
+
+    set kindle_application to "Kindle"
+    set kindle_process to "Amazon Kindle"
+    set target_dir to "~/Downloads/tigris/"
+    do shell script ("mkdir -p " & target_dir)
+
+    tell application "System Events"
+        tell application process kindle_process
+            set frontmost to true
+
+            set w to window 1
+            set dimensions_pos to position of w
+
+            --
+            -- Work around Apple bug miscalculating height for half full screen tiled windows
+            --
+            set height to 0
+            repeat with p in paragraphs of (do shell script "system_profiler SPDisplaysDataType | awk '/Resolution/ { print $4 }'")
+                set height to word 1 of p as number
+            end repeat
+
+            set dimensions_size to {item 1 of (size of w as list), height}
+        end tell
+    end tell
+
+    set rect to ("" & (item 1 of dimensions_pos) & "," & (item 2 of dimensions_pos) & "," & (item 1 of dimensions_size) & "," & (item 2 of dimensions_size))
+    set i to 0
+
+    repeat n times
+        do shell script ("screencapture -R " & rect & " " & target_dir & "frame-" & i & ".png")
+        set i to i + 1
+
+        tell application "System Events"
+            tell process kindle_process
+                key code 124 -- right arrow
+            end tell
+        end tell
+
+        delay 1
+    end repeat
+end run
