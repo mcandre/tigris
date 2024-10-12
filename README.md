@@ -82,3 +82,7 @@ $ rm -rf ~/tigris
 # CONTRIBUTING
 
 For more information on developing tigris itself, see [DEVELOPMENT.md](DEVELOPMENT.md).
+
+# SEE ALSO
+
+* [harmonica](https://github.com/mcandre/harmonica), a comic book repackager
