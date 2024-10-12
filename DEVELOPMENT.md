@@ -1,7 +1,7 @@
 # BUILDTIME REQUIREMENTS
 
-* [Kindle](https://www.amazon.com/b?ie=UTF8&node=16571048011) 7.20+
 * [git](https://git-scm.com/) 2.46.1+
+* [Kindle](https://www.amazon.com/b?ie=UTF8&node=16571048011) 7.20+
 * [macOS](https://www.apple.com/macos) 15+
 
 ## Recommended

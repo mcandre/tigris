@@ -24,13 +24,13 @@ BSD-2-Clause
 
 # RUNTIME REQUIREMENTS
 
+* [git](https://git-scm.com/) 2.46.1+
 * [Kindle](https://www.amazon.com/b?ie=UTF8&node=16571048011) 7.20+
 * [macOS](https://www.apple.com/macos) 15+
 
 ## Recommended
 
 * [Amphetamine](https://apps.apple.com/us/app/amphetamine/id937984704)
-* [git](https://git-scm.com/) 2.46.1+
 * [ImageMagick](https://imagemagick.org/)
 
 # INSTALL
