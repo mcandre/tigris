@@ -70,7 +70,11 @@ $ rm -rf ~/tigris
 
 The first several runs of the application may trigger OS permission prompts, for the console emulator and/or tigris.
 
-Grant the permission to the respective application(s). Then relaunch the console emulator and retry.
+Repeat until all permission prompts appear to be resolved:
+
+1. Grant the permission to the respective application(s).
+2. Quit and relaunch the console emulator.
+3. Retry the tigris operation.
 
 Recommend prototyping archival scans with a small frame count (e.g. 3) in order to accelerate troubleshooting.
 
