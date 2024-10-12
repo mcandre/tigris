@@ -22,7 +22,7 @@ For personal archival purposes only.
 
 BSD-2-Clause
 
-# REQUIREMENTS
+# RUNTIME REQUIREMENTS
 
 * [Kindle](https://www.amazon.com/b?ie=UTF8&node=16571048011) 7.20+
 * [macOS](https://www.apple.com/macos) 15+
@@ -30,15 +30,41 @@ BSD-2-Clause
 ## Recommended
 
 * [Amphetamine](https://apps.apple.com/us/app/amphetamine/id937984704)
+* [git](https://git-scm.com/) 2.46.1+
 * [ImageMagick](https://imagemagick.org/)
 
 # INSTALL
 
-Add .../tigris/bin to `PATH`.
+1. Clone the project to a local directory.
+
+```console
+$ git clone https://github.com/mcandre/tigris.git ~/tigris
+```
+
+2. Add .../tigris/bin to `PATH`.
+
+~/.zshrc:
+
+```zsh
+# ...
+export PATH="$PATH:$HOME/tigris/bin"
+```
 
 # UNINSTALL
 
-Remove .../tigris/bin from `PATH`.
+1. Remove .../tigris/bin from `PATH`.
+
+~/.zshrc:
+
+```zsh
+# ...
+```
+
+2. Remove local clone directory.
+
+```console
+$ rm -rf ~/tigris
+```
 
 # PREREQUISITES
 
@@ -52,3 +78,7 @@ Remove .../tigris/bin from `PATH`.
 * Queue `tigris` command in console emulator, then adjust the cursor to minimize Kindle HUD artifacts before submitting the command with the Return (Enter) key.
 * Temporarily silence browser and other application notifications during scans.
 * To end the script early, foreground the console emulator and press `Control + C`.
+
+# CONTRIBUTING
+
+For more information on developing tigris itself, see [DEVELOPMENT.md](DEVELOPMENT.md).
