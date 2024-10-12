@@ -91,7 +91,6 @@ Recommend prototyping archival scans with a small frame count (e.g. 3) in order 
 * Queue `tigris` command in console emulator, then adjust the cursor to minimize Kindle HUD artifacts before submitting the command with the Return (Enter) key.
 * Temporarily silence browser and other application notifications during scans.
 
-
 # CONTRIBUTING
 
 For more information on developing tigris itself, see [DEVELOPMENT.md](DEVELOPMENT.md).
