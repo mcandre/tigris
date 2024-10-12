@@ -7,6 +7,17 @@
 -- * Kindle app tiled to left half of full screen.
 -- * Desired book open to starting page.
 
+-- https://gist.github.com/andrewbonnington/c3cc79e4a0af5368c50f
+on ceil(x)
+	set y to x div 1
+
+	if x > 0 and x mod 1 is not 0 then
+		set y to y + 1
+	end if
+
+	return y
+end ceil
+
 on run argv
     set n to 1
 
@@ -14,9 +25,16 @@ on run argv
         set n to item 1 of argv as number
     end try
 
+    set digits to ceil((do shell script "echo 'l(" & n & "+0.1)/l(10)' | bc -l") as real)
+    set padding to "0"
+
+    repeat (digits-1) times
+        set padding to padding & "0"
+    end repeat
+
     set kindle_application to "Kindle"
     set kindle_process to "Amazon Kindle"
-    set target_dir to "~/Downloads/tigris/"
+    set target_dir to "~/Downloads/tigris"
     do shell script ("mkdir -p " & target_dir)
 
     tell application "System Events"
@@ -42,7 +60,8 @@ on run argv
     set i to 0
 
     repeat n times
-        do shell script ("screencapture -R " & rect & " " & target_dir & "frame-" & i & ".png")
+        set frame_padded to text -4 thru -1 of (padding & i)
+        do shell script ("screencapture -R " & rect & " " & target_dir & "/" & frame_padded & ".png")
         set i to i + 1
 
         tell application "System Events"

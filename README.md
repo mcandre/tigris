@@ -6,9 +6,9 @@
 $ tigris 101
 
 $ ls ~/Downloads/tigris
-frame-0.png
-frame-1.png
-frame-2.png
+000.png
+001.png
+002.png
 ...
 ```
 
