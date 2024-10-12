@@ -11,7 +11,7 @@
 
 # INSTALL
 
-(Adjust git forks, clone URLs, remotes, HEAD pointer, and local directory name as needed.)
+(Adjust git forks, clone URLs, remotes, HEAD pointer, and/or local directory name as needed.)
 
 1. Clone the project to a local directory.
 
