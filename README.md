@@ -68,7 +68,7 @@ $ rm -rf ~/tigris
 
 # APPLICATION PRIVILEGES
 
-The first several runs of the application may trigger OS permission prompts, for the console emulator and/or tigris.
+The first several runs of the application may trigger OS permission prompts, for the console emulator, Script Editor, and/or tigris.
 
 Repeat until all permission prompts appear to be resolved:
 
