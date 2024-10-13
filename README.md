@@ -2,7 +2,9 @@
 
 # EXAMPLE
 
-Use `Window` -> `Full Screen Tile` -> `Left of Screen` to half-fullscreen tile a Kindle comic. Then run:
+Open Kindle to the start of your favorite comic book.
+
+Then run:
 
 ```
 $ tigris
