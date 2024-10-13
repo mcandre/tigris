@@ -20,7 +20,7 @@ Archive:  ~/Downloads/euphrates.cbz
     testing: euphrates/   OK
     testing: euphrates/000.png   OK
     testing: euphrates/001.png   OK
-    testing: euphrates/0002.png  OK
+    testing: euphrates/002.png  OK
 ...
 ```
 
