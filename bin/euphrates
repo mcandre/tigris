@@ -5,16 +5,14 @@ set -euf
 usage() {
     echo "Usage: $0 [OPTIONS] [<source directory> (default ~/tigris)]"
     echo ""
-    echo "-n <frames>\t\tFrame limit. Nonpositive indicates unbounded (default: 0)"
     echo "-o <directory>\tOutput path (default: <source directory>/../euphrates)"
-    echo "-l <amount>\t\tTrim left pixels, e.g. 104 (default: 0)"
-    echo "-t <amount>\t\tTrim top pixels, e.g. 70 (default: 0)"
-    echo "-r <amount>\t\tTrim right pixels, e.g. 103 (default: 0)"
-    echo "-b <amount>\t\tTrim bottom pixels, e.g. 69420 (default: 0)"
-    echo "-h\t\t\tShow usage menu"
+    echo "-l <amount>\tTrim left pixels, e.g. 104 (default: 0)"
+    echo "-t <amount>\tTrim top pixels, e.g. 70 (default: 0)"
+    echo "-r <amount>\tTrim right pixels, e.g. 103 (default: 0)"
+    echo "-b <amount>\tTrim bottom pixels, e.g. 69420 (default: 0)"
+    echo "-h\t\tShow usage menu"
 }
 
-FRAMES='0'
 SOURCE_DIR="$HOME/Downloads/tigris"
 TARGET_DIR=''
 TRIM_LEFT='0'
@@ -24,11 +22,6 @@ TRIM_BOTTOM='0'
 
 while [ "$#" -ge 1 ]; do
     case "$1" in
-    '-n')
-        shift
-        FRAMES="$1"
-        shift
-        ;;
     '-o')
         shift
         TARGET_DIR="$1"
@@ -78,26 +71,15 @@ if [ -z "$TARGET_DIR" ]; then
 fi
 
 mkdir -p "$TARGET_DIR"
-i=1
-
-for F in $(find "$SOURCE_DIR" -type f -print | LC_ALL=C sort); do
-    if [ "$FRAMES" -gt 0 ] && [ "$i" -gt "$FRAMES" ]; then
-        break
-    fi
-
-    B="$(basename "$F")"
-    C="$TARGET_DIR/$B"
-    ORIGINAL_DIMENSIONS="$(magick identify "$F" | awk '{ print $3 }')"
-    ORIGINAL_WIDTH="${ORIGINAL_DIMENSIONS%x*}"
-    ORIGINAL_HEIGHT="${ORIGINAL_DIMENSIONS#*x}"
-    WIDTH=$((ORIGINAL_WIDTH - TRIM_LEFT - TRIM_RIGHT))
-    HEIGHT=$((ORIGINAL_HEIGHT - TRIM_TOP - TRIM_BOTTOM))
-
-    magick \
-        "$F" \
-        -crop \
-        "${WIDTH}x${HEIGHT}+${TRIM_LEFT}+${TRIM_TOP}" \
-        "PNG32:${C}"
-
-    i=$((i + 1))
-done
+find "$SOURCE_DIR" \
+    -type f \
+    -print0 |
+    xargs \
+        -0 \
+        -n 1 \
+        _euphrates \
+            "$TARGET_DIR" \
+            "$TRIM_LEFT" \
+            "$TRIM_TOP" \
+            "$TRIM_RIGHT" \
+            "$TRIM_BOTTOM"

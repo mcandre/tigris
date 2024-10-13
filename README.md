@@ -38,7 +38,6 @@ Adjust the frames to match the number of pages in your comic book.
 
 `euphrates` trims panel borders.
 
-* `-n <frames>` controls the limit of images that euphrates processes
 * `-o <directory>` customizes the output directory path, default `<source directory>/../euphrates/`
 * `-l <amount>` trims pixels from the left, e.g. 104 (default 0)
 * `-t <amount>` trims pixels from the top, e.g. 70 (default 0)
