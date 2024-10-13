@@ -4,20 +4,24 @@
 
 Open Kindle to the start of your favorite comic book.
 
-Then run:
+Use `Window` -> `Full Screen Tile` -> `Left of Screen` to tile Kindle into a left half-fullscreen orientation.
+
+Then run archival utilities:
 
 ```
 $ tigris
 
 $ euphrates
 
-$ ls ~/Downloads/euphrates
-000.png
-001.png
-002.png
-...
-
 $ zip -r ~/Downloads/euphrates.cbz ~/Downloads/euphrates
+
+$ unzip -tvl ~/Downloads/euphrates.cbz
+Archive:  ~/Downloads/euphrates.cbz
+    testing: euphrates/   OK
+    testing: euphrates/000.png   OK
+    testing: euphrates/001.png   OK
+    testing: euphrates/0002.png  OK
+...
 ```
 
 # ABOUT
@@ -44,6 +48,10 @@ See `euphrates -h` for more detail.
 ## zip
 
 Use a compressor, such as Archive Utility or the `zip` CLI tool, to bundle the desired panels into DRM-free comic ebooks.
+
+`zip -r <archive-path> <source-directory>` compresses directories recursively into an archive. For comic books, use an archive path extension like `.cbz`.
+
+`unzip -tvl <archive-path>`
 
 # DISCLAIMER
 
