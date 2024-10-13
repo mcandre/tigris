@@ -3,10 +3,13 @@
 # EXAMPLE
 
 ```
-$ tigris 101
-$ cd ~/Downloads
-$ euphrates tigris
-$ ls euphrates
+<Left half fullscreen tile a Kindle comic>
+
+$ tigris 5
+
+$ euphrates
+
+$ ls ~/Downloads/euphrates
 000.png
 001.png
 002.png
@@ -33,8 +36,6 @@ Adjust the frames to match the number of pages in your comic book.
 * `-b <amount>` trims pixels from the bottom, e.g. 69420 (default 0)
 
 See `euphrates -h` for more detail.
-
-Note that frame count `1` is useful for accelearting troubleshooting and other kinds of experiments.
 
 # DISCLAIMER
 
