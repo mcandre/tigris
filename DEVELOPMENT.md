@@ -49,3 +49,15 @@ export PATH="$PATH:$HOME/tigris/bin"
 ```console
 $ rm -rf ~/tigris
 ```
+
+# AUDIT
+
+```console
+$ ./build audit
+```
+
+# LINT
+
+```console
+$ ./build [lint]
+```
