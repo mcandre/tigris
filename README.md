@@ -114,7 +114,7 @@ Repeat until all permission prompts appear to be resolved:
 
 1. Grant the permission to the respective application(s).
 2. Quit and relaunch the console emulator.
-3. Retry the tigris operation.
+3. Retry the operation.
 
 Recommend prototyping archival scans with a small frame count (e.g. 3) in order to accelerate troubleshooting.
 
@@ -127,11 +127,11 @@ Recommend prototyping archival scans with a small frame count (e.g. 3) in order 
 
 # TIPS
 
-* To end the script early, foreground the console emulator and press `Control + C`
-* To end a script early in an Apple Script Editor session, press `Command + Period` (`.`)
+* To end a console command early, foreground the console emulator and press `Control + C`
+* To end a run in the macOS Script Editor application, press `Command + Period` (`.`)
 * Queue `tigris` command in console emulator, then adjust the cursor to minimize Kindle HUD artifacts before submitting the command with the Return (Enter) key
 * Temporarily silence browser and other application notifications during scans
-* Keep backups of `tigris/` images before altering the images with `euphrates`
+* Keep backups of `tigris/` images before altering images with `euphrates`
 
 # CONTRIBUTING
 
