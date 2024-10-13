@@ -1,4 +1,4 @@
-# tigris & euphrates: comic book archival utilities
+# tigris & euphrates: (Kindle) comic book archival utilities
 
 # EXAMPLE
 
