@@ -2,10 +2,10 @@
 
 # EXAMPLE
 
-```
-<Left half fullscreen tile a Kindle comic>
+Use `Window` -> `Full Screen Tile` -> `Left of Screen` to half-fullscreen tile a Kindle comic. Then run:
 
-$ tigris 5
+```
+$ tigris
 
 $ euphrates
 
