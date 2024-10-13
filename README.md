@@ -6,7 +6,7 @@ Open Kindle to the start of your favorite comic book.
 
 Use `Window` -> `Full Screen Tile` -> `Left of Screen` to tile Kindle into a left half-fullscreen orientation.
 
-Then run archival utilities:
+Then run our special archival utilities:
 
 ```
 $ tigris
