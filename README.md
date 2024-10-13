@@ -9,14 +9,16 @@ Use `Window` -> `Full Screen Tile` -> `Left of Screen` to tile Kindle into a lef
 Then run our special archival utilities:
 
 ```
+$ cd ~/Downloads
+
 $ tigris
 
 $ euphrates
 
-$ zip -r ~/Downloads/euphrates.cbz ~/Downloads/euphrates
+$ zip -r euphrates.cbz euphrates
 
-$ unzip -tvl ~/Downloads/euphrates.cbz
-Archive:  ~/Downloads/euphrates.cbz
+$ unzip -tvl euphrates.cbz
+Archive:  euphrates.cbz
     testing: euphrates/   OK
     testing: euphrates/000.png   OK
     testing: euphrates/001.png   OK
