@@ -2,6 +2,8 @@
 unset IFS
 set -euf
 
+TIGRIS_VERSION='0.0.1'
+
 usage() {
     echo "Usage: $0 [OPTIONS] [<source directory> (default ~/tigris)]"
     echo ""
@@ -10,7 +12,12 @@ usage() {
     echo "-t <amount>\tTrim top pixels, e.g. 70 (default: 0)"
     echo "-r <amount>\tTrim right pixels, e.g. 103 (default: 0)"
     echo "-b <amount>\tTrim bottom pixels, e.g. 69420 (default: 0)"
+    echo "-v\t\tShow version identifier"
     echo "-h\t\tShow usage menu"
+}
+
+banner() {
+    echo "tigris + euphrates $TIGRIS_VERSION"
 }
 
 SOURCE_DIR="$HOME/Downloads/tigris"
@@ -46,6 +53,10 @@ while [ "$#" -ge 1 ]; do
         shift
         TRIM_BOTTOM="$1"
         shift
+        ;;
+    '-v')
+        banner
+        exit
         ;;
     '-h')
         usage
