@@ -1,4 +1,4 @@
-# tigris & euphrates: Kindle comic book archiver utilities
+# tigris & euphrates: comic book archival utilities
 
 # EXAMPLE
 
