@@ -127,10 +127,11 @@ Recommend prototyping archival scans with a small frame count (e.g. 3) in order 
 
 # TIPS
 
-* To end the script early, foreground the console emulator and press `Control + C`.
-* Queue `tigris` command in console emulator, then adjust the cursor to minimize Kindle HUD artifacts before submitting the command with the Return (Enter) key.
-* Temporarily silence browser and other application notifications during scans.
-* Keep backups of `tigris/` images before altering the images with `euphrates`.
+* To end the script early, foreground the console emulator and press `Control + C`
+* To end a script early in an Apple Script Editor session, press `Command + Period` (`.`)
+* Queue `tigris` command in console emulator, then adjust the cursor to minimize Kindle HUD artifacts before submitting the command with the Return (Enter) key
+* Temporarily silence browser and other application notifications during scans
+* Keep backups of `tigris/` images before altering the images with `euphrates`
 
 # CONTRIBUTING
 
