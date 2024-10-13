@@ -22,8 +22,6 @@ $ ls
 
 Adjust the frames to match the number of pages in your comic book.
 
-Note that frame count `1` is useful for accelearting troubleshooting and other kinds of experiments.
-
 ## euphrates
 
 `euphrates` trims panel borders.
@@ -36,6 +34,8 @@ Note that frame count `1` is useful for accelearting troubleshooting and other k
 * `-b <amount>` controls how many pixels to trim from the bottom border of each frame.
 
 See `euphrates -h` for more detail.
+
+Note that frame count `1` is useful for accelearting troubleshooting and other kinds of experiments.
 
 # DISCLAIMER
 
