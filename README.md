@@ -121,4 +121,5 @@ For more information on developing tigris itself, see [DEVELOPMENT.md](DEVELOPME
 
 # SEE ALSO
 
+* [buttery](https://github.com/mcandre/buttery), an animated GIF editor
 * [harmonica](https://github.com/mcandre/harmonica), a comic book repackager
