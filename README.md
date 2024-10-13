@@ -1,18 +1,41 @@
-# tigris: Kindle comic book archiver
+# tigris & euphrates: Kindle comic book archiver utilities
 
 # EXAMPLE
 
 ```
 $ tigris 101
 
-$ ls ~/Downloads/tigris
+$ euphrates tigris
+
+$ ls
 000.png
 001.png
 002.png
 ...
 ```
 
-Adjust `101` to match desired frame count.
+# ABOUT
+
+## tigris
+
+`tigris [<frames>]` captures raw archival panels.
+
+Adjust the frames to match the number of pages in your comic book.
+
+Note that frame count `1` is useful for accelearting troubleshooting and other kinds of experiments.
+
+## euphrates
+
+`euphrates` trims panel borders.
+
+* `-n <frames>` controls the limit of images that euphrates processes.
+* `-o <directory>` customizes the output directory path.
+* `-l <amount>` controls how many pixels to trim from the left border of each frame.
+* `-t <amount>` controls how many pixels to trim from the top border of each frame.
+* `-r <amount>` controls how many pixels to trim from the right border of each frame.
+* `-b <amount>` controls how many pixels to trim from the bottom border of each frame.
+
+See `euphrates -h` for more detail.
 
 # DISCLAIMER
 
@@ -25,13 +48,13 @@ BSD-2-Clause
 # RUNTIME REQUIREMENTS
 
 * [git](https://git-scm.com/) 2.46.1+
+* [ImageMagick](https://imagemagick.org/) 7.1.1+
 * [Kindle](https://www.amazon.com/b?ie=UTF8&node=16571048011) 7.20+
 * [macOS](https://www.apple.com/macos) 15+
 
 ## Recommended
 
 * [Amphetamine](https://apps.apple.com/us/app/amphetamine/id937984704)
-* [ImageMagick](https://imagemagick.org/)
 
 # INSTALL
 
@@ -90,6 +113,7 @@ Recommend prototyping archival scans with a small frame count (e.g. 3) in order 
 * To end the script early, foreground the console emulator and press `Control + C`.
 * Queue `tigris` command in console emulator, then adjust the cursor to minimize Kindle HUD artifacts before submitting the command with the Return (Enter) key.
 * Temporarily silence browser and other application notifications during scans.
+* Keep backups of `tigris/` images before altering the images with `euphrates`.
 
 # CONTRIBUTING
 

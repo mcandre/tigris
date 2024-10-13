@@ -1,0 +1,84 @@
+#!/bin/sh
+unset IFS
+set -euf
+
+usage() {
+    echo "Usage: $0 [OPTIONS] <source directory>"
+    echo ""
+    echo "-n <frames>\t\tFrame limit. Nonpositive indicates unbounded (default: 0)"
+    echo "-o <directory>\tOutput path (default: <source directory>/../euphrates)"
+    echo "-l <amount>\t\tTrim left pixels (default: 104)"
+    echo "-t <amount>\t\tTrim top pixels (default: 70)"
+    echo "-r <amount>\t\tTrim right pixels (default: 103)"
+    echo "-b <amount>\t\tTrim bottom pixels (default: 0)"
+}
+
+if [ "$#" -lt 1 ]; then
+    usage
+    exit 1
+fi
+
+FRAMES='0'
+TARGET_DIR=''
+TRIM_LEFT='104'
+TRIM_TOP='70'
+TRIM_RIGHT='103'
+TRIM_BOTTOM='0'
+
+while [ "$#" -ge 1 ]; do
+    case "$1" in
+    '-n')
+        shift
+        FRAMES="$1"
+        shift
+        ;;
+    '-o')
+        shift
+        TARGET_DIR="$1"
+        shift
+        ;;
+    '-h')
+        usage
+        exit
+        ;;
+    *)
+        break
+        ;;
+    esac
+done
+
+if [ "$#" -gt 1 ]; then
+    usage
+    exit 1
+fi
+
+SOURCE_DIR="$1"
+
+if [ -z "$TARGET_DIR" ]; then
+    TARGET_DIR="${SOURCE_DIR}/../euphrates"
+fi
+
+mkdir -p "$TARGET_DIR"
+i=1
+
+for F in $(find "$SOURCE_DIR" -type f -print | LC_ALL=C sort); do
+    if [ "$FRAMES" -gt 0 ] && [ "$i" -gt "$FRAMES" ]; then
+        break
+    fi
+
+    B="$(basename "$F")"
+    C="$TARGET_DIR/$B"
+    ORIGINAL_DIMENSIONS="$(magick identify "$F" | awk '{ print $3 }')"
+    ORIGINAL_WIDTH="${ORIGINAL_DIMENSIONS%x*}"
+    ORIGINAL_HEIGHT="${ORIGINAL_DIMENSIONS#*x}"
+    WIDTH=$((ORIGINAL_WIDTH - TRIM_LEFT - TRIM_RIGHT))
+    HEIGHT=$((ORIGINAL_HEIGHT - TRIM_TOP - TRIM_BOTTOM))
+
+    magick \
+        "$F" \
+        -crop \
+        "${WIDTH}x${HEIGHT}+${TRIM_LEFT}+${TRIM_TOP}" \
+        "PNG32:${C}"
+
+    i=$((i + 1))
+done
