@@ -16,6 +16,8 @@ $ ls ~/Downloads/euphrates
 001.png
 002.png
 ...
+
+$ zip -r ~/Downloads/euphrates.cbz ~/Downloads/euphrates
 ```
 
 # ABOUT
@@ -38,6 +40,10 @@ Adjust the frames to match the number of pages in your comic book.
 * `-b <amount>` trims pixels from the bottom, e.g. 69420 (default 0)
 
 See `euphrates -h` for more detail.
+
+## zip
+
+Use a compressor, such as Archive Utility or the `zip` CLI tool, to bundle the desired panels into DRM-free comic ebooks.
 
 # DISCLAIMER
 
