@@ -57,6 +57,7 @@ BSD-2-Clause
 ## Recommended
 
 * [Amphetamine](https://apps.apple.com/us/app/amphetamine/id937984704)
+* [zip](https://linux.die.net/man/1/zip)
 
 # INSTALL
 
