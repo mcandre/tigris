@@ -11,6 +11,7 @@ usage() {
     echo "-t <amount>\t\tTrim top pixels, e.g. 70 (default: 0)"
     echo "-r <amount>\t\tTrim right pixels, e.g. 103 (default: 0)"
     echo "-b <amount>\t\tTrim bottom pixels, e.g. 69420 (default: 0)"
+    echo "-h\t\t\tShow usage menu"
 }
 
 FRAMES='0'
