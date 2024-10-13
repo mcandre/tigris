@@ -4,10 +4,9 @@
 
 ```
 $ tigris 101
-
+$ cd ~/Downloads
 $ euphrates tigris
-
-$ ls
+$ ls euphrates
 000.png
 001.png
 002.png
@@ -18,7 +17,7 @@ $ ls
 
 ## tigris
 
-`tigris [<frames>]` captures raw archival panels.
+`tigris [<frames>]` captures raw archival panels to `~/Downloads/tigris/`
 
 Adjust the frames to match the number of pages in your comic book.
 
@@ -26,12 +25,12 @@ Adjust the frames to match the number of pages in your comic book.
 
 `euphrates` trims panel borders.
 
-* `-n <frames>` controls the limit of images that euphrates processes.
-* `-o <directory>` customizes the output directory path.
-* `-l <amount>` controls how many pixels to trim from the left border of each frame.
-* `-t <amount>` controls how many pixels to trim from the top border of each frame.
-* `-r <amount>` controls how many pixels to trim from the right border of each frame.
-* `-b <amount>` controls how many pixels to trim from the bottom border of each frame.
+* `-n <frames>` controls the limit of images that euphrates processes
+* `-o <directory>` customizes the output directory path, default `<source directory>/../euphrates/`
+* `-l <amount>` trims pixels from the left border of each frame
+* `-t <amount>` trims pixels from the top border of each frame
+* `-r <amount>` trims pixels from the right border of each frame
+* `-b <amount>` trims pixels from the bottom border of each frame
 
 See `euphrates -h` for more detail.
 
