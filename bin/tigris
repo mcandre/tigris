@@ -27,6 +27,7 @@ on run argv
 
     set digits to ceil((do shell script "echo 'l(" & n & "+0.1)/l(10)' | bc -l") as real)
     set padding to "0"
+    set inverse_pad_length to -1 * digits
 
     repeat (digits-1) times
         set padding to padding & "0"
@@ -60,7 +61,7 @@ on run argv
     set i to 0
 
     repeat n times
-        set frame_padded to text -4 thru -1 of (padding & i)
+        set frame_padded to text inverse_pad_length thru -1 of (padding & i)
         do shell script ("screencapture -R " & rect & " " & target_dir & "/" & frame_padded & ".png")
         set i to i + 1
 
