@@ -15,41 +15,6 @@
 * [Amphetamine](https://apps.apple.com/us/app/amphetamine/id937984704)
 * [zip](https://linux.die.net/man/1/zip)
 
-# INSTALL
-
-(Adjust git forks, clone URLs, remotes, HEAD pointer, and/or local directory name as needed.)
-
-1. Clone the project to a local directory.
-
-```console
-$ git clone https://github.com/mcandre/tigris.git ~/tigris
-```
-
-2. Add .../tigris/bin to `PATH`.
-
-~/.zshrc:
-
-```zsh
-# ...
-export PATH="$PATH:$HOME/tigris/bin"
-```
-
-# UNINSTALL
-
-1. Remove .../tigris/bin from `PATH`.
-
-~/.zshrc:
-
-```zsh
-# ...
-```
-
-2. Remove local clone directory.
-
-```console
-$ rm -rf ~/tigris
-```
-
 # AUDIT
 
 ```console
