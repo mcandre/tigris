@@ -1,5 +1,5 @@
 .POSIX:
-# .SILENT:
+.SILENT:
 .PHONY: \
 	all \
 	audit \
@@ -53,9 +53,6 @@ slick:
 
 snyk:
 	snyk test --all-projects --exclude=requirements.txt
-	pwd
-	ls -Ahl
-	ls -Ahl .venv/bin
 	snyk test --command=.venv/bin/python3
 
 unmake:
