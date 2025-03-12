@@ -19,7 +19,7 @@ jobs:
     - name: "provision dev tools"
       run: |
         sudo apt-get update
-    #     sudo apt-get install -y python3-venv
+        sudo apt-get install -y python3-venv
     #     make go
     # - name: "install snyk"
     #   run: |
