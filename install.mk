@@ -6,7 +6,7 @@
 	python \
 	rust
 
-all: go rust
+all: go python rust
 
 go:
 	go install golang.org/x/vuln/cmd/govulncheck@latest
