@@ -53,7 +53,8 @@ slick:
 
 snyk:
 	snyk test --all-projects --exclude=requirements.txt
-	snyk test -d --command=.venv/bin/python3
+	ls -Ahl .venv/bin
+	snyk test --command=.venv/bin/python3
 
 unmake:
 	unmake .
