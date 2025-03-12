@@ -20,7 +20,7 @@ jobs:
       run: |
         sudo apt-get update
         sudo apt-get install -y python3-venv
-    #     make go
+        make -f install.mk go
     # - name: "install snyk"
     #   run: |
     #     curl -LO https://downloads.snyk.io/cli/stable/snyk-linux
