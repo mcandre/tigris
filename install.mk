@@ -10,8 +10,8 @@ all: go python rust
 
 go:
 	go install golang.org/x/vuln/cmd/govulncheck@latest
-	go mod tidy
 	go install tool
+	go mod tidy
 
 python:
 	python3 -m venv .venv
