@@ -6,7 +6,7 @@
 * [POSIX](https://pubs.opengroup.org/onlinepubs/9799919799/) compatible [make](https://en.wikipedia.org/wiki/Make_(software))
 * [macOS](https://www.apple.com/macos) 15+
 * [ShellCheck](https://www.shellcheck.net/) 0.10.0+
-* [Go](https://go.dev/) 1.24.4+
+* [Go](https://go.dev/) 1.24.5+
 * [Python](https://www.python.org/) 3.13.5+
 * [Rust](https://www.rust-lang.org/) 1.87.0+
 * [POSIX](https://pubs.opengroup.org/onlinepubs/9799919799/) compatible [sh](https://en.wikipedia.org/wiki/Unix_shell)
