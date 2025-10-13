@@ -1,5 +1,6 @@
 # INSTALLATION REQUIREMENTS
 
+* [bash](https://www.gnu.org/software/bash/) 4+
 * [git](https://git-scm.com/) 2.46.1+
 * [ImageMagick](https://imagemagick.org/) 7.1.1+
 * [Kindle](https://www.amazon.com/b?ie=UTF8&node=16571048011) 7.20+

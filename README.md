@@ -64,6 +64,7 @@ BSD-2-Clause
 
 # RUNTIME REQUIREMENTS
 
+* [bash](https://www.gnu.org/software/bash/) 4+
 * [ImageMagick](https://imagemagick.org/) 7.1.1+
 * [Kindle](https://www.amazon.com/b?ie=UTF8&node=16571048011) 7.20+
 * [macOS](https://www.apple.com/macos) 15+

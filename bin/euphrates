@@ -1,6 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 unset IFS
-set -euf
+set -eufo pipefail
 
 TIGRIS_VERSION='0.0.1'
 
