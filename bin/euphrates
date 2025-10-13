@@ -5,19 +5,19 @@ set -eufo pipefail
 TIGRIS_VERSION='0.0.1'
 
 usage() {
-    echo "Usage: $0 [OPTIONS] [<source directory> (default ~/tigris)]"
-    echo ""
-    echo "-o <directory>\tOutput path (default: <source directory>/../euphrates)"
-    echo "-l <amount>\tTrim left pixels, e.g. 104 (default: 0)"
-    echo "-t <amount>\tTrim top pixels, e.g. 70 (default: 0)"
-    echo "-r <amount>\tTrim right pixels, e.g. 103 (default: 0)"
-    echo "-b <amount>\tTrim bottom pixels, e.g. 69420 (default: 0)"
-    echo "-v\t\tShow version identifier"
-    echo "-h\t\tShow usage menu"
+    printf "Usage: %s [OPTIONS] [<source directory> (default ~/tigris)]\n" "$0"
+    printf "\n"
+    printf -- "-o <directory>\tOutput path (default: <source directory>/../euphrates)\n"
+    printf -- "-l <amount>\tTrim left pixels, e.g. 104 (default: 0)\n"
+    printf -- "-t <amount>\tTrim top pixels, e.g. 70 (default: 0)\n"
+    printf -- "-r <amount>\tTrim right pixels, e.g. 103 (default: 0)\n"
+    printf -- "-b <amount>\tTrim bottom pixels, e.g. 69420 (default: 0)\n"
+    printf -- "-v\t\tShow version identifier\n"
+    printf -- "-h\t\tShow usage menu\n"
 }
 
 banner() {
-    echo "tigris + euphrates $TIGRIS_VERSION"
+    printf "tigris + euphrates %s\n" "$TIGRIS_VERSION"
 }
 
 SOURCE_DIR="$HOME/Downloads/tigris"
@@ -89,8 +89,8 @@ find "$SOURCE_DIR" \
         -0 \
         -n 1 \
         _euphrates \
-            "$TARGET_DIR" \
-            "$TRIM_LEFT" \
-            "$TRIM_TOP" \
-            "$TRIM_RIGHT" \
-            "$TRIM_BOTTOM"
+        "$TARGET_DIR" \
+        "$TRIM_LEFT" \
+        "$TRIM_TOP" \
+        "$TRIM_RIGHT" \
+        "$TRIM_BOTTOM"

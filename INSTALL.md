@@ -21,7 +21,7 @@ $ git clone https://github.com/mcandre/tigris.git "$HOME/tigris"
 
 2. Add .../tigris/bin to `PATH` in your user shell configuration.
 
-For example, `$HOME/.zshrc` (zsh):
+For example, `$HOME/.bashrc` (bash):
 
 ```sh
 # ...
@@ -32,7 +32,7 @@ export PATH="$PATH:$HOME/tigris/bin"
 
 1. Remove .../tigris/bin from `PATH`.
 
-For example, `$HOME/.zshrc` (zsh):
+For example, `$HOME/.bashrc` (bash):
 
 ```sh
 # ...
