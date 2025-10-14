@@ -19,7 +19,7 @@ jobs:
         python-version: "3.13"
     - name: "provision dev tools"
       run: |
-        sudo apt-get update
-        sudo apt-get install -y python3-venv shellcheck
+        sudo apt update
+        sudo apt install -y python3-venv shellcheck
         ./install
     - run: "./build lint"
