@@ -7,10 +7,11 @@
 * [ImageMagick](https://imagemagick.org/) 7.1.1+
 * [Kindle](https://www.amazon.com/b?ie=UTF8&node=16571048011) 7.20+
 * [macOS](https://www.apple.com/macos) 15+
+* POSIX compliant [make](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/make.html)
 * [ShellCheck](https://www.shellcheck.net/) 0.11.0+
 * [Python](https://www.python.org/)
 * [Snyk](https://snyk.io/)
-* Provision additional dev tools with `./install`
+* Provision additional dev tools with `make`
 
 ## Recommended
 

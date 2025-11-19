@@ -71,6 +71,7 @@ BSD-2-Clause
 
 ## Recommended
 
+* a UNIX-like environment (e.g. [WSL](https://learn.microsoft.com/en-us/windows/wsl/))
 * [Amphetamine](https://apps.apple.com/us/app/amphetamine/id937984704)
 * [zip](https://infozip.sourceforge.net/)
 
