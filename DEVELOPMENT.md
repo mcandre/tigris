@@ -10,7 +10,6 @@
 * POSIX compliant [make](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/make.html)
 * [ShellCheck](https://www.shellcheck.net/) 0.11.0+
 * [Python](https://www.python.org/)
-* [Snyk](https://snyk.io/)
 * Provision additional dev tools with `make`
 
 ## Recommended
