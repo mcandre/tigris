@@ -1,5 +1,15 @@
 # tigris & euphrates: (Kindle) comic book archival utilities
 
+[![license](https://img.shields.io/badge/license-BSD-3)](LICENSE.md)
+
+# DISCLAIMER
+
+For personal archival purposes only.
+
+# SUMMARY
+
+tigris helps to automate the painstaking task of archiving electronic comic books.
+
 # EXAMPLE
 
 Open Kindle to the start of your favorite comic book.
@@ -53,14 +63,6 @@ Use a compressor, such as Archive Utility or the `zip` CLI tool, to bundle the d
 `zip -r <archive-path> <source-directory>` compresses directories recursively into an archive. For comic books, use an archive path extension like `.cbz`.
 
 `unzip -tvl <archive-path>`
-
-# DISCLAIMER
-
-For personal archival purposes only.
-
-# LICENSE
-
-BSD-2-Clause
 
 # RUNTIME REQUIREMENTS
 
