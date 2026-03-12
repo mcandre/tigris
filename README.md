@@ -112,9 +112,10 @@ Recommend prototyping archival scans with a small frame count (e.g. 3) in order 
 
 For more information on developing tigris itself, see [DEVELOPMENT.md](DEVELOPMENT.md).
 
-# SEE ALSO
+# RESOURCES
 
-* [bao](https://github.com/mcandre/bao), a PDF compressor
-* [buttery](https://github.com/mcandre/buttery), an animated GIF editor
-* [harmonica](https://github.com/mcandre/harmonica), a comic book repackager
-* [nile](https://github.com/mcandre/nile), an ebook normalizer
+Related tools.
+
+* [mcandre/buttery](https://github.com/mcandre/buttery) - an animated GIF editor
+* [mcandre/harmonica](https://github.com/mcandre/harmonica) - a comic book repackager
+* [mcandre/nile](https://github.com/mcandre/nile) - an ebook normalizer
