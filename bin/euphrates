@@ -2,7 +2,7 @@
 unset IFS
 set -eufo pipefail
 
-TIGRIS_VERSION='0.0.1'
+TIGRIS_VERSION='0.0.2'
 
 usage() {
     printf "Usage: %s [OPTIONS] [<source directory> (default ~/tigris)]\n" "$0"
