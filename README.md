@@ -47,7 +47,6 @@ git clone https://github.com/mcandre/tigris.git ~/src/github.com/mcandre/tigris
 * [macOS](https://www.apple.com/os/macos/) Tahoe+
 * an ereader, such as [Kindle](https://www.amazon.com/b?ie=UTF8&node=16571048011)
 * [bash](https://www.gnu.org/software/bash/) 4+
-* [findutils](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/find.html)
 * [git](https://git-scm.com/)
 * [ImageMagick](https://imagemagick.org/#gsc.tab=0)
 
