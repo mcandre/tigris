@@ -54,6 +54,7 @@ git clone https://github.com/mcandre/tigris.git ~/src/github.com/mcandre/tigris
 ### Recommended
 
 * [Amphetamine](https://apps.apple.com/us/app/amphetamine/id937984704)
+* [Homebrew](https://brew.sh/)
 * [zip](https://infozip.sourceforge.net/)
 
 ## Postinstall
