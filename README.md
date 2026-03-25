@@ -1,6 +1,6 @@
-# tigris & euphrates: (Kindle) comic book archival utilities
+# tigris & euphrates: comic book archival utilities
 
-[![Lint](https://github.com/mcandre/tigris/actions/workflows/lint.yml/badge.svg)](https://github.com/mcandre/tigris/actions/workflows/lint.yml) [![license](https://img.shields.io/badge/license-BSD-3)](LICENSE.md)
+[![Lint](https://github.com/mcandre/tigris/actions/workflows/lint.yml/badge.svg)](https://github.com/mcandre/tigris/actions/workflows/lint.yml) [![license](https://img.shields.io/badge/license-BSD-0)](LICENSE.md)
 
 # DISCLAIMER
 
@@ -18,16 +18,16 @@ Use `Window` -> `Full Screen Tile` -> `Left of Screen` to tile Kindle into a lef
 
 Then run our special archival utilities:
 
-```
-$ cd ~/Downloads
+```console
+% cd ~/Downloads
 
-$ tigris
+% tigris
 
-$ euphrates
+% euphrates
 
-$ zip -r euphrates.cbz euphrates
+% zip -r euphrates.cbz euphrates
 
-$ unzip -tvl euphrates.cbz
+% unzip -tvl euphrates.cbz
 Archive:  euphrates.cbz
     testing: euphrates/   OK
     testing: euphrates/000.png   OK
@@ -36,86 +36,53 @@ Archive:  euphrates.cbz
 ...
 ```
 
-# ABOUT
+# DOWNLOAD
 
-## tigris
+```
+git clone https://github.com/mcandre/tigris.git ~/src/github.com/mcandre/tigris
+```
 
-`tigris [<frames>]` captures raw archival panels to `~/Downloads/tigris/`
+## Prerequisites
 
-Adjust the frames to match the number of pages in your comic book.
-
-## euphrates
-
-`euphrates` trims panel borders.
-
-* `-o <directory>` customizes the output directory path, default `<source directory>/../euphrates/`
-* `-l <amount>` trims pixels from the left, e.g. 104 (default 0)
-* `-t <amount>` trims pixels from the top, e.g. 70 (default 0)
-* `-r <amount>` trims pixels from the right, e.g. 103 (default 0)
-* `-b <amount>` trims pixels from the bottom, e.g. 69420 (default 0)
-
-See `euphrates -h` for more detail.
-
-## zip
-
-Use a compressor, such as Archive Utility or the `zip` CLI tool, to bundle the desired panels into DRM-free comic ebooks.
-
-`zip -r <archive-path> <source-directory>` compresses directories recursively into an archive. For comic books, use an archive path extension like `.cbz`.
-
-`unzip -tvl <archive-path>`
-
-# RUNTIME REQUIREMENTS
-
+* [macOS](https://www.apple.com/os/macos/) Tahoe+
+* an ereader, such as [Kindle](https://www.amazon.com/b?ie=UTF8&node=16571048011)
 * [bash](https://www.gnu.org/software/bash/) 4+
-* [ImageMagick](https://imagemagick.org/) 7.1.1+
-* [Kindle](https://www.amazon.com/b?ie=UTF8&node=16571048011) 7.20+
-* [macOS](https://www.apple.com/macos) 15+
+* [findutils](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/find.html)
+* [git](https://git-scm.com/)
+* [ImageMagick](https://imagemagick.org/#gsc.tab=0)
 
-## Recommended
+### Recommended
 
-* a UNIX-like environment (e.g. [WSL](https://learn.microsoft.com/en-us/windows/wsl/))
 * [Amphetamine](https://apps.apple.com/us/app/amphetamine/id937984704)
 * [zip](https://infozip.sourceforge.net/)
 
-# INSTALL
+## Postinstall
 
-For more information on installing or uninstalling tigris & euphrates, see [INSTALL.md](INSTALL.md).
+Register `"$HOME/src/github.com/mcandre/tigris/bin` to `PATH` environment variable.
 
-# APPLICATION PRIVILEGES
+For details on tuning tigris & euphrates, see [CONFIGURATION](CONFIGURATION.md).
 
-The first several runs of the application may trigger OS permission prompts, for the console emulator, Script Editor, and/or tigris.
+For details on building from source, see [DEVELOPMENT](DEVELOPMENT.md).
+
+# RBAC
+
+Warning: The first several runs of the application may trigger OS permission prompts, for the console emulator, Script Editor, and/or tigris.
 
 Repeat until all permission prompts appear to be resolved:
 
 1. Grant the permission to the respective application(s).
-2. Quit and relaunch the console emulator.
+2. Quit and relaunch the terminal emulator.
 3. Retry the operation.
 
 Recommend prototyping archival scans with a small frame count (e.g. 3) in order to accelerate troubleshooting.
 
-# PREREQUISITES
-
-1. Launch a console emulator, e.g. Terminal.
-2. Open desired Kindle book to starting page.
-3. Select `Window` -> `Full Screen Tile` -> `Left of Screen`.
-4. Select console emulator as the right tile.
-
-# TIPS
-
-* To end a console command early, foreground the console emulator and press `Control + C`
-* To end a run in the macOS Script Editor application, press `Command + Period` (`.`)
-* Queue `tigris` command in console emulator, then adjust the cursor to minimize Kindle HUD artifacts before submitting the command with the Return (Enter) key
-* Temporarily silence browser and other application notifications during scans
-* Keep backups of `tigris/` images before altering images with `euphrates`
-
-# CONTRIBUTING
-
-For more information on developing tigris itself, see [DEVELOPMENT.md](DEVELOPMENT.md).
-
 # RESOURCES
 
-Related tools.
+Prior art, personal plugs, and tools for managing digital content.
 
+* [Comic Book Plus](https://comicbookplus.com/) - public domain comics
 * [mcandre/buttery](https://github.com/mcandre/buttery) - an animated GIF editor
 * [mcandre/harmonica](https://github.com/mcandre/harmonica) - a comic book repackager
 * [mcandre/nile](https://github.com/mcandre/nile) - an ebook normalizer
+
+🌾
