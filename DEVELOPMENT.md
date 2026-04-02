@@ -24,7 +24,9 @@ We follow standard, `make` based commands for performing build operations.
 
 ## Postinstall
 
-Register `"$HOME/src/github.com/mcandre/tigris/bin` to `PATH` environment variable.
+Register output of `go env GOBIN` to `PATH` environment variable.
+
+Register `<git-clone-directory>/bin` to `PATH` environment variable.
 
 # TASKS
 
