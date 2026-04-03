@@ -2,9 +2,7 @@
 
 We follow standard, `make` based commands for performing build operations.
 
-# DEV ENVIRONMENT
-
-## Prerequisites
+# PREREQUISITES
 
 * [macOS](https://www.apple.com/os/macos/) Tahoe+
 * an ereader, such as [Kindle](https://www.amazon.com/b?ie=UTF8&node=16571048011)
