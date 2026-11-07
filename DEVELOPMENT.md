@@ -9,7 +9,7 @@ We follow standard, `make` based commands for performing build operations.
 * [bash](https://www.gnu.org/software/bash/) 4+
 * [git](https://git-scm.com/)
 * [Go](https://go.dev/)
-* [ImageMagick](https://imagemagick.org/#gsc.tab=0)
+* [ImageMagick](https://imagemagick.org/#gsc.tab=0) 7+
 * [make](https://pubs.opengroup.org/onlinepubs/9799919799/utilities/make.html)
 * [ShellCheck](https://www.shellcheck.net/) 0.11.0+
 * Provision additional dev tools with `make -f install.mk`

@@ -13,7 +13,7 @@ mkdir -p "$TARGET_DIR"
 B="$(basename "$SOURCE_FILE")"
 C="$TARGET_DIR/$B"
 
-ORIGINAL_DIMENSIONS="$(convert identify "$SOURCE_FILE" |
+ORIGINAL_DIMENSIONS="$(magick identify "$SOURCE_FILE" |
     awk 'match($0, /[0-9]+x[0-9]+/) { print substr($0, RSTART, RLENGTH) }')"
 
 ORIGINAL_WIDTH="${ORIGINAL_DIMENSIONS%x*}"
@@ -22,7 +22,7 @@ ORIGINAL_HEIGHT="${ORIGINAL_DIMENSIONS#*x}"
 WIDTH=$((ORIGINAL_WIDTH - TRIM_LEFT - TRIM_RIGHT))
 HEIGHT=$((ORIGINAL_HEIGHT - TRIM_TOP - TRIM_BOTTOM))
 
-convert \
+magick \
     "$SOURCE_FILE" \
     -crop \
     "${WIDTH}x${HEIGHT}+${TRIM_LEFT}+${TRIM_TOP}" \

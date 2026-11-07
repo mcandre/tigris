@@ -48,7 +48,7 @@ git clone https://github.com/mcandre/tigris.git ~/src/github.com/mcandre/tigris
 * an ereader, such as [Kindle](https://www.amazon.com/b?ie=UTF8&node=16571048011)
 * [bash](https://www.gnu.org/software/bash/) 4+
 * [git](https://git-scm.com/)
-* [ImageMagick](https://imagemagick.org/#gsc.tab=0)
+* [ImageMagick](https://imagemagick.org/#gsc.tab=0) 7+
 
 ### Recommended
 
