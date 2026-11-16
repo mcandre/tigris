@@ -1,6 +1,6 @@
 # tigris & euphrates: comic book archival utilities
 
-[![Lint](https://github.com/mcandre/tigris/actions/workflows/lint.yml/badge.svg)](https://github.com/mcandre/tigris/actions/workflows/lint.yml) [![license](https://img.shields.io/badge/license-BSD-0)](LICENSE.md)
+[![CI/CD](https://badgen.net/github/checks/mcandre/tigris?icon=github)](https://github.com/mcandre/tigris/actions) [![License](https://badgen.net/static/license/BSD/ab2b29?icon=freebsd)](LICENSE.md)
 
 # DISCLAIMER
 
